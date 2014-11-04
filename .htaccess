@@ -1,9 +1,4 @@
 # Apache Server Configs v2.2.0 | MIT License
-# https://github.com/h5bp/server-configs-apache
-
-# (!) Using `.htaccess` files slows down Apache, therefore, if you have access
-# to the main server config file (usually called `httpd.conf`), you should add
-# this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
 
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
@@ -74,7 +69,7 @@ Options -MultiViews
 # Customize what Apache returns to the client in case of an error.
 # http://httpd.apache.org/docs/current/mod/core.html#errordocument
 
-# ErrorDocument 404 /404.html
+ErrorDocument 404 /404.html
 
 
 # ##############################################################################
@@ -475,18 +470,6 @@ AddDefaultCharset utf-8
 # <IfModule mod_headers.c>
 #    Header set Strict-Transport-Security "max-age=16070400; includeSubDomains"
 # </IfModule>
-
-# ------------------------------------------------------------------------------
-# | Server software information                                                |
-# ------------------------------------------------------------------------------
-
-# Avoid displaying the exact Apache version number, the description of the
-# generic OS-type and the information about Apache's compiled-in modules.
-
-# ADD THIS DIRECTIVE IN THE `httpd.conf` AS IT WILL NOT WORK IN THE `.htaccess`!
-
-# ServerTokens Prod
-
 
 # ##############################################################################
 # # WEB PERFORMANCE                                                            #
